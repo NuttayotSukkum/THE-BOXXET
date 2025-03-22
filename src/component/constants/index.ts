@@ -19,7 +19,7 @@
       backgroundImage: BoothSet,
     },
     {
-      title: "DesignElement Design",
+      title: "Element Design",
       link: "/element-design",
       bullets: ["Art Display Panel", "Name Plate and Printing", "Carpet", "Packaging"],
       backgroundImage: ElementDesign,

@@ -5,7 +5,6 @@ import central from "../../assets/page/central.png";
 import theMall from "../../assets/page/the-mall.png";
 import customeAsia from "../../assets/page/customasia.png";
 import theBoxxetIcon from "../../assets/logo/the-boxext.png";
-import facebook from "../../assets/page/facebook.png";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
@@ -32,8 +31,7 @@ import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import { GalleryImg } from "../../component/constants/gallery-index.ts";
 import { FaLine } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-
-
+import { FacebookPagePlugin } from "../utils/ComponentsUtil.tsx";
 
 interface SessionProps {
   id: string;
@@ -51,46 +49,86 @@ export const Session: React.FC<SessionProps> = ({
   const translations: { [key: string]: Translations } = Constants.translations;
 
   return (
-    <section
-    id={id}
-    className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-full  text-center md:text-left py-9 "
-  >
-    {/* ส่วนซ้าย: รูป + Title */}
-    <div className="flex flex-col justify-center items-center px-6 ">
-      <div className="w-full xl:w-[500px] ">
-        <h1 className="font-bold border-b-4 border-black inline-block px-4" style={{ fontSize: "clamp(3rem, 5vw, 3rem)" }}>
+    //   <section
+    //   id={id}
+    //   className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-full  text-center md:text-left py-9 "
+    // >
+    //   {/* ส่วนซ้าย: รูป + Title */}
+    //   <div className="flex flex-col justify-center items-center px-6 ">
+    //     <div className="w-full xl:w-[500px] ">
+    //       <h1 className="font-bold border-b-4 border-black inline-block px-4" style={{ fontSize: "clamp(3rem, 5vw, 3rem)" }}>
+    //         {translations[language].about}
+    //       </h1>
+    //     </div>
+
+    //     <div className="flex justify-center max-w-[500px] mt-4">
+    //       <img
+    //         src={pic}
+    //         alt={landing}
+    //         className="w-full h-auto object-cover rounded-xl shadow-lg"
+    //       />
+    //     </div>
+    //   </div>
+
+    //   {/* ส่วนขวา: ข้อความ + ปุ่ม */}
+    //   <div className=" flex flex-col justify-center items-center px-6">
+    //     <h1 className="sm:text-xs md:text-xl lg:text-3xl 2xl:text-4xl font-bold">
+    //       {translations[language].contractUsMainTitle}
+    //     </h1>
+    //     <h2 className="sm:text-xs md:text-xl lg:text-2xl 2xl:text-3xl mt-2">
+    //       {translations[language].contractUsSubTitle}
+    //     </h2>
+    //     <p className="text-gray-600 mt-6 text-pretty whitespace-normal indent-6 leading-relaxed">
+    //       {translations[language].contractUsdescription}
+    //     </p>
+    //     <Link
+    //       to="/contact"
+    //       className="text-center w-full bg-customBlue text-customYellow py-3 px-6 rounded-lg hover:bg-customYellow hover:text-customBlue transition-all mt-6 text-[clamp(1rem, 2vw, 1.25rem)]"
+    //     >
+    //       {translations[language].contactUs}
+    //     </Link>
+    //   </div>
+    // </section>
+    <>
+      <div className="mx-4 mb-5 sm:px-[7vw] sm:mb-10">
+        <h1
+          className="font-bold border-b-4 border-black inline-block px-4 mt-5"
+          style={{ fontSize: "clamp(3rem, 5vw, 3rem)" }}
+        >
           {translations[language].about}
         </h1>
+        <section id={id}>
+          <div className="w-full mt-5">
+            <div className="w-full flex flex-col xl:flex-row gap-8 ">
+              <div className="w-full ">
+                <img
+                  src={pic}
+                  alt={landing}
+                  className="sm:w-[80%] sm:h-[100%] object-cover rounded-xl shadow-lg"
+                />
+              </div>
+              <div className="w-full flex flex-col h-auto mt-4 xl:mt-0  ">
+                <h1 className="sm:text-xs md:text-xl lg:text-3xl 2xl:text-4xl font-bold text-center">
+                  {translations[language].contractUsMainTitle}
+                </h1>
+                <h2 className="sm:text-xs md:text-xl lg:text-2xl 2xl:text-3xl mt-2 text-center">
+                  {translations[language].contractUsSubTitle}
+                </h2>
+                <p className="text-gray-600 mt-6 text-pretty whitespace-normal indent-8 leading-relaxed">
+                  {translations[language].contractUsdescription}
+                </p>
+                <Link
+                  to="/contact"
+                  className="text-center w-full bg-customBlue text-customYellow py-3 px-6 rounded-lg hover:bg-customYellow hover:text-customBlue transition-all mt-6 text-[clamp(1rem, 2vw, 1.25rem)]"
+                >
+                  {translations[language].contactUs}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-
-      <div className="flex justify-center max-w-[500px] mt-4">
-        <img
-          src={pic}
-          alt={landing}
-          className="w-full h-auto object-cover rounded-xl shadow-lg"
-        />
-      </div>
-    </div>
-
-    {/* ส่วนขวา: ข้อความ + ปุ่ม */}
-    <div className=" flex flex-col justify-center items-center px-6">
-      <h1 className="sm:text-xs md:text-xl lg:text-3xl 2xl:text-4xl font-bold">
-        {translations[language].contractUsMainTitle}
-      </h1>
-      <h2 className="sm:text-xs md:text-xl lg:text-2xl 2xl:text-3xl mt-2">
-        {translations[language].contractUsSubTitle}
-      </h2>
-      <p className="text-gray-600 mt-6 text-pretty whitespace-normal indent-6 leading-relaxed">
-        {translations[language].contractUsdescription}
-      </p>
-      <Link
-        to="/contact"
-        className="text-center w-full bg-customBlue text-customYellow py-3 px-6 rounded-lg hover:bg-customYellow hover:text-customBlue transition-all mt-6 text-[clamp(1rem, 2vw, 1.25rem)]"
-      >
-        {translations[language].contactUs}
-      </Link>
-    </div>
-  </section>
+    </>
   );
 };
 
@@ -371,7 +409,7 @@ export const ServiceSection: React.FC<ServiceProps> = ({
                     nextEl: hideNav ? null : ".swiper-button-next-custom",
                   }}
                   autoplay={{
-                    delay: 3000,
+                    delay: 6000,
                     disableOnInteraction: false,
                   }}
                   modules={[Pagination, Navigation, FreeMode, Autoplay]}
@@ -463,21 +501,17 @@ export const FooterSection: React.FC<CustomerProps> = ({ id, language }) => {
           </div>
 
           {/* Facebook */}
-          <div>
+          <div className="mt-12">
             <h1 className="text-2xl relative after:content-[''] after:block after:w-12 after:h-1 after:bg-yellow-500 after:mt-2">
               FaceBook
             </h1>
             <div className="mt-4">
-              <img
-                src={facebook}
-                alt="Facebook"
-                className="w-[214px] h-[136px]"
-              />
+              <FacebookPagePlugin />
             </div>
           </div>
 
           {/* ติดต่อเรา */}
-          <div className="mt-16">
+          <div className="mt-14">
             <h1 className="text-2xl relative after:content-[''] after:block after:w-12 after:h-1 after:bg-yellow-500 after:mt-2">
               {translations[language].contactUs}
             </h1>
@@ -492,10 +526,13 @@ export const FooterSection: React.FC<CustomerProps> = ({ id, language }) => {
               </div>
               <div className="flex items-start gap-2">
                 <PlaceOutlinedIcon />
-                <p className="w-[238px]">
+                <a
+                  href="https://www.google.com/maps/dir//The+Villa+Ramintra+14+134+The+Villa+%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%AD%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B2-%E0%B8%A7%E0%B8%87%E0%B9%81%E0%B8%AB%E0%B8%A7%E0%B8%99+Tha+Raeng,+Bang+Khen,+Bangkok+10220/@13.8594214,100.6666058,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x311d63299f994771:0xe8a631c6d650331d!2m2!1d100.6666024!2d13.8594292?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D"
+                  className="w-[238px]"
+                >
                   The Villa Ramindra 14, 134 The Villa Ramindra Bang Khen Tha
                   Raeng, Bang Khen, Bangkok 10220
-                </p>
+                </a>
               </div>
             </div>
           </div>
@@ -538,9 +575,9 @@ export const AboutSection1: React.FC<AboutUsProps> = ({ language, img }) => {
         className="px-[7vw] py-[1vw] w-full h-[30vh]"
         style={{
           backgroundImage: `url(${img})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <h1
@@ -562,9 +599,9 @@ export const GallerySection: React.FC<AboutUsProps> = ({ language, img }) => {
         className="px-[7vw] py-[1vw] relative w-full h-full"
         style={{
           backgroundImage: `url(${img})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <h1
@@ -589,9 +626,9 @@ export const OurServiceSection: React.FC<AboutUsProps> = ({
         className="px-[7vw] py-[1vw] relative w-full h-full"
         style={{
           backgroundImage: `url(${img})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <h1
@@ -613,9 +650,9 @@ export const ContactSection: React.FC<AboutUsProps> = ({ language, img }) => {
         className="px-[7vw] py-[1vw] relative w-full h-full"
         style={{
           backgroundImage: `url(${img})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <h1
@@ -694,6 +731,9 @@ interface BoothProps {
   pageId: string;
 }
 
+
+
+
 export const BoothsSection: React.FC<BoothProps> = ({ id, pageId }) => {
   const selectedBoothCategory = BoothData.find((booth) => booth.id === pageId);
   const [selectedBoothId, setSelectedBoothId] = useState<string>(
@@ -703,6 +743,8 @@ export const BoothsSection: React.FC<BoothProps> = ({ id, pageId }) => {
   const selectedBooth = selectedBoothCategory?.data.find(
     (booth) => booth.title === selectedBoothId
   );
+  console.log(selectedBooth);
+  
   const [selectedImageIndex, setSelectedImagIndex] = useState(0);
 
   const swiperRef = useRef<any>(null);
@@ -727,7 +769,11 @@ export const BoothsSection: React.FC<BoothProps> = ({ id, pageId }) => {
               }`}
               onClick={() => setSelectedBoothId(booth.title)}
             >
-              <img src={booth.img[0]} alt="#" className="w-20 h-20  xl:w-[167px] xl:h-[167px]" />
+              <img
+                src={booth.img[0]}
+                alt="#"
+                className="w-20 h-20  xl:w-[167px] xl:h-[167px]"
+              />
               <h1 className="text-[10px] xl:text-[18px]">{booth.title}</h1>
             </div>
           ))}
@@ -767,35 +813,65 @@ export const BoothsSection: React.FC<BoothProps> = ({ id, pageId }) => {
               </button>
             </div>
 
-            <div className="w-full h-auto  text-left xl:w-[630px] xl:h-[490px] bg-gray-200 border-l-4 border-black  xl:border-gray-400 ">
-              <div className="mt-4 ml-4 mr-4">
+            <div className="w-full min-h-[490px] text-left xl:w-[630px] bg-gray-200 border-l-4 border-black xl:border-gray-400 flex flex-col">
+              <div className="p-4 flex flex-col flex-grow">
                 <div className="h-auto">
-                  <h1 className="text-4xl xl:text-2xl">{selectedBooth?.title}</h1>
+                  <h1 className="text-4xl ">
+                    {selectedBooth?.title}
+                  </h1>
                 </div>
+
                 {selectedBooth?.price && selectedBooth?.price.length > 0 && (
                   <div>
-                    <h2 className="text-xs mt-6">ราคาเริ่มต้น</h2>
-                    <h1 className="xl:text-xl font-bold xl:font-normal text-3xl mt-4 xl:mt-0">฿ {selectedBooth?.price}</h1>
+                    <h2 className=" text-sm md:text-base mt-6">ราคาเริ่มต้น</h2>
+                    <h1 className="md:text-4xl font-bold text-3xl mt-4">
+                    {selectedBooth.price}
+                    </h1>
                   </div>
                 )}
-                <div className="xl:w-[520px] xl:h-[132px] mt-2 xl:mt-6  w-full mb-5">
+                    {selectedBooth?.title2 && selectedBooth?.title2.length > 0 && (
+                      <h1 className="lg:text-xl mt-4 xl:mt-8 px-5 font-bold ">
+                        {selectedBooth?.title2}
+                      </h1>
+                    )}
+
+                <div className="mt-2 xl:mt-6 w-full flex-grow">
                   {selectedBooth?.descriptionTitle &&
                     selectedBooth?.descriptionTitle.length > 0 && (
-                      <h1 className="xl:text-xs ml-5 mt-4 xl:mt-0">
+                      <h1 className="lg:text-xl mt-4 xl:mt-0 px-5">
                         {selectedBooth?.descriptionTitle}
                       </h1>
                     )}
-                  <div className="xl:w-[488px] h-[154px] w-full">
+
+                
+
+                  {/* Description (Mobile View) */}
+                  <div className="xl:w-[488px] h-auto w-full md:hidden block">
                     {selectedBooth?.Description &&
                       selectedBooth.Description.length > 0 && (
-                        <ul className="list-disc list-inside ml-5 mt-3 max-h-40 overflow-y-auto xl:border xl:border-gray-300 rounded-md xl:p-2">
+                        <ul className="list-disc list-inside ml-5 mt-3 xl:border xl:border-gray-300 rounded-md xl:p-2">
                           {selectedBooth?.Description?.map((item, index) => (
                             <li key={index}>{item}</li>
                           ))}
                         </ul>
                       )}
                   </div>
-                  <div className="w-full">
+
+                  {/* Description (Desktop View) */}
+                  <div className="w-full flex flex-col xl:flex-row items-start justify-start ml-4 ">
+                    <div className="w-[80%] md:block hidden">
+                      {selectedBooth?.Description &&
+                        selectedBooth.Description.length > 0 && (
+                          <ul className="list-disc list-inside self-start mt-3 xl:border xl:border-gray-300 rounded-md xl:p-2">
+                            {selectedBooth?.Description?.map((item, index) => (
+                              <li key={index}>{item}</li>
+                            ))}
+                          </ul>
+                        )}
+                    </div>
+                  </div>
+                  {/* Implementation Button */}
+                  <div className="w-full my-4 ">
                     {selectedBooth?.Implementation &&
                       selectedBooth?.Implementation.length > 0 && (
                         <ButtomBlue
@@ -803,14 +879,16 @@ export const BoothsSection: React.FC<BoothProps> = ({ id, pageId }) => {
                         />
                       )}
                   </div>
-                  <div className="flex mt-6 justify-center items-center">
-                    <ContractButtom />
-                  </div>
+                </div>
+
+                {/* Contract Button ที่อยู่ล่างสุด */}
+                <div className="mt-auto flex justify-center items-center">
+                  <ContractButtom />
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex mt-20 justify-start">
+          <div className="flex mt-5 justify-start">
             {selectedBooth?.img.map((img, index) => (
               <div
                 key={index}
@@ -821,7 +899,11 @@ export const BoothsSection: React.FC<BoothProps> = ({ id, pageId }) => {
                 }`}
                 onClick={() => handleThumbnailClick(index)}
               >
-                <img src={img} alt="" className="w-20 h-20 xl:w-full xl:h-full" />
+                <img
+                  src={img}
+                  alt=""
+                  className="w-20 h-20 xl:w-full xl:h-full"
+                />
               </div>
             ))}
           </div>
@@ -893,20 +975,23 @@ export const ContractComponent: React.FC<AboutUsDescProps> = () => {
           <PhoneIcon />
           <p>095-956-5419, 064-265-9428</p>
         </div>
-        <div className="flex items-start gap-2">
+        <div className="flex items-start gap-2 text-left">
           <LocationOnOutlinedIcon />
-          <div>
-            <p className="font-bold">The Villa Ramindra</p>
-            <p>ที่อยู่ที่ต้องการแสดง</p>
-          </div>
+          <a href="https://www.google.com/maps/dir//The+Villa+Ramintra+14+134+The+Villa+%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%AD%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B2-%E0%B8%A7%E0%B8%87%E0%B9%81%E0%B8%AB%E0%B8%A7%E0%B8%99+Tha+Raeng,+Bang+Khen,+Bangkok+10220/@13.8594214,100.6666058,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x311d63299f994771:0xe8a631c6d650331d!2m2!1d100.6666024!2d13.8594292?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D">
+            <div>
+              <p className="font-bold">The Villa Ramindra</p>
+              <p className="w-[238px] text-pretty">
+                The Villa Ramindra 14, 134 The Villa Ramindra Bang Khen Tha
+                Raeng, Bang Khen, Bangkok 10220
+              </p>
+            </div>
+          </a>
         </div>
-        <div className="flex items-start gap-2">
+        <div className="flex items-start gap-2 text-left">
           <FacebookOutlinedIcon />
           <div>
             <p className="font-bold">THE BOXXET</p>
-            <a href="https://www.facebook.com/boxxet" className="text-blue-500">
-              facebook.com/boxxet
-            </a>
+            <a href="https://www.facebook.com/boxxet">facebook.com/boxxet</a>
           </div>
         </div>
         <div className="flex items-start gap-2">
@@ -986,6 +1071,10 @@ export const GalleryComponentPage: React.FC<GalleryProps> = ({
   const currentGallery = GalleryImg.find((g) => g.page === currentPage);
   const selectedImages = currentGallery ? currentGallery.images : [];
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentPage]);
+
   return (
     <div id={id} className="container mx-auto h-auto mt-8 px-4">
       <div className="flex flex-col items-center text-center">
@@ -1009,7 +1098,9 @@ export const GalleryComponentPage: React.FC<GalleryProps> = ({
                 ? "opacity-50 cursor-not-allowed"
                 : "hover:bg-gray-300"
             }`}
-            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+            onClick={() => {
+              setCurrentPage((prev) => Math.max(prev - 1, 1));
+            }}
             disabled={currentPage === 1}
           >
             Previous
@@ -1023,9 +1114,9 @@ export const GalleryComponentPage: React.FC<GalleryProps> = ({
                 ? "opacity-50 cursor-not-allowed"
                 : "hover:bg-gray-300"
             }`}
-            onClick={() =>
-              setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-            }
+            onClick={() => {
+              setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+            }}
             disabled={currentPage === totalPages}
           >
             Next

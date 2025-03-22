@@ -186,3 +186,28 @@ export const LanguageSwitcherApp: React.FC = ({}) => {
     </div>
   );
 };
+
+
+ export const FacebookPagePlugin = () => {
+  useEffect(() => {
+    if ((window as any).FB) {
+      (window as any).FB.XFBML.parse();
+    }
+  }, []);
+
+  return (
+    <div className="fb-page"
+      data-href="https://www.facebook.com/boxxet"
+      data-tabs="timeline"
+      data-width="200"
+      data-height="200"
+      data-small-header="true"
+      data-adapt-container-width="true"
+      data-hide-cover="true"
+      data-show-facepile="true">
+      <blockquote cite="https://www.facebook.com/boxxet" className="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/boxxet">The Boxxet - บริการให้เช่าอุปกรณ์ออกบูธครบวงจร</a>
+      </blockquote>
+    </div>
+  );
+};
