@@ -731,9 +731,6 @@ interface BoothProps {
   pageId: string;
 }
 
-
-
-
 export const BoothsSection: React.FC<BoothProps> = ({ id, pageId }) => {
   const selectedBoothCategory = BoothData.find((booth) => booth.id === pageId);
   const [selectedBoothId, setSelectedBoothId] = useState<string>(
@@ -744,7 +741,7 @@ export const BoothsSection: React.FC<BoothProps> = ({ id, pageId }) => {
     (booth) => booth.title === selectedBoothId
   );
   console.log(selectedBooth);
-  
+
   const [selectedImageIndex, setSelectedImagIndex] = useState(0);
 
   const swiperRef = useRef<any>(null);
@@ -816,24 +813,22 @@ export const BoothsSection: React.FC<BoothProps> = ({ id, pageId }) => {
             <div className="w-full min-h-[490px] text-left xl:w-[630px] bg-gray-200 border-l-4 border-black xl:border-gray-400 flex flex-col">
               <div className="p-4 flex flex-col flex-grow">
                 <div className="h-auto">
-                  <h1 className="text-4xl ">
-                    {selectedBooth?.title}
-                  </h1>
+                  <h1 className="text-4xl ">{selectedBooth?.title}</h1>
                 </div>
 
                 {selectedBooth?.price && selectedBooth?.price.length > 0 && (
                   <div>
                     <h2 className=" text-sm md:text-base mt-6">ราคาเริ่มต้น</h2>
                     <h1 className="md:text-4xl font-bold text-3xl mt-4">
-                    {selectedBooth.price}
+                      {selectedBooth.price}
                     </h1>
                   </div>
                 )}
-                    {selectedBooth?.title2 && selectedBooth?.title2.length > 0 && (
-                      <h1 className="lg:text-xl mt-4 xl:mt-8 px-5 font-bold ">
-                        {selectedBooth?.title2}
-                      </h1>
-                    )}
+                {selectedBooth?.title2 && selectedBooth?.title2.length > 0 && (
+                  <h1 className="lg:text-xl mt-4 xl:mt-8 px-5 font-bold ">
+                    {selectedBooth?.title2}
+                  </h1>
+                )}
 
                 <div className="mt-2 xl:mt-6 w-full flex-grow">
                   {selectedBooth?.descriptionTitle &&
@@ -842,8 +837,14 @@ export const BoothsSection: React.FC<BoothProps> = ({ id, pageId }) => {
                         {selectedBooth?.descriptionTitle}
                       </h1>
                     )}
-
-                
+                  <div className="mt-5">
+                    {selectedBooth?.descriptionTitle &&
+                      selectedBooth?.descriptionTitle.length > 0 && (
+                        <h1 className="lg:text-xl mt-4 xl:mt-0 px-5">
+                          {selectedBooth?.descriptionTitle2}
+                        </h1>
+                      )}
+                  </div>
 
                   {/* Description (Mobile View) */}
                   <div className="xl:w-[488px] h-auto w-full md:hidden block">
@@ -918,7 +919,7 @@ interface ButtomBlueProps {
 }
 const ButtomBlue: React.FC<ButtomBlueProps> = ({ title }) => {
   return (
-    <div className="bg-[#0E2433] text-white text-center px-6 py-2 rounded-full text-xs font-medium mt-6">
+    <div className="bg-[#0E2433] text-white text-center px-6 py-2 rounded-full text-lg font-medium mt-6">
       {title}
     </div>
   );

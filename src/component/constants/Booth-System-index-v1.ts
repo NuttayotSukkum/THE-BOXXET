@@ -60,6 +60,7 @@ export const BoothData = [
 
                     descriptionTitle: "บริการให้เช่าบูธมาตรฐาน บูธสำเร็จรูป บูธนิทรรศการ ",
                     Description: ["ขนาด 2x2 เมตร ราคา 1200 บาท บูธ 3 วัน", "ขนาด 2x3 เมตร ราคา 1350 บาท/บูธ 3 วัน", "ขนาด 3x3 เมตร ราคา 1450 บาท/บูธ 3 วัน"],
+                    descriptionTitle2: null ,
                     Implementation: "ออเดอร์ขั้นต่ำ 3 บูธขึ้นไป กรณีเช่าต่ำกว่า 3 บูธ คิดเป็นผนัง ผนังละ 600 บาท",
                     img: [
                         R8BoothImg1,
@@ -75,6 +76,7 @@ export const BoothData = [
                     title2 : null,
 
                     descriptionTitle: "บริการให้เช่าบูธโครงไม้ เหมาะกับกิจกรรมแฟร์ในห้างสรรพสินค้า หรืองานที่มีคอนเซปกลาง ต้องการตกแต่งบูธให้เหมือนกัน โดยที่ยังมีพื้นที่ในการจัดแสดงหรือขายสินค้า และน้ำหนักไม่เยอะ",
+                    descriptionTitle2: null ,
                     Description: ["ขนาด 2x2 เมตร ราคา 1600 บาท/บูธ 3 วัน", "ขนาด 2x3 เมตร ราคา 1700 บาท/บูธ 3 วัน", "ขนาด 3x3 เมตร ราคา 1800 บาท/บูธ 3 วัน"],
                     Implementation: "ออเดอร์ขั้นต่ำ 3 บูธขึ้นไป",
                     img: [
@@ -92,6 +94,7 @@ export const BoothData = [
                     title2 : null,
 
                     descriptionTitle: "บริการให้เช่าบูธ Maxima เหมาะสำหรับการออกบูธที่มีพื้นที่ในการออกแบบมากกว่าบูธมาตรฐาน หรือต้องการลูกเล่น ความโดดเด่น และมีการใช้ฟีเจอร์ต่างๆ ภายในบูธ แต่มีเวลาติดตั้งจำกัด",
+                    descriptionTitle2: null ,
                     Description: ["ขนาด 2x2 เมตร ราคา 3150 บาท/บูธ 3 วัน", "ขนาด 2x3 เมตร ราคา 3400 บาท/บูธ 3 วัน", "ขนาด 3x3 เมตร ราคา 3850 บาท/บูธ 3 วัน"],
                     Implementation: "Exhibition Booth หรือต้องการ Custom Booth โดยใช้วัสดุจาก Maxima Booth เริ่มต้น 25000 บาท",
                     img: [
@@ -108,6 +111,7 @@ export const BoothData = [
                     title2 : null,
 
                     descriptionTitle: "บริการออกแบบโครงสร้าง หรือออกแบบการตกแต่งบูธ โดยเป็นการขึ้นโครงสร้างใหม่ หรือใช้โครงสร้างที่ต่างไปจากบูธมาตรฐาน",
+                    descriptionTitle2: null ,
                     // Description: ["ขนาด 2x2 เมตร ราคา 3150 บาท/บูธ 3 วัน", "ขนาด 2x3 เมตร ราคา 3400 บาท/บูธ 3 วัน", "ขนาด 3x3 เมตร ราคา 3850 บาท/บูธ 3 วัน"],
                     // Implementation: "Exhibition Booth หรือต้องการ Custom Booth โดยใช้วัสดุจาก Maxima Booth เริ่มต้น 25000 บาท",
                     img: [
@@ -131,8 +135,9 @@ export const BoothData = [
                 title2 : null,
 
                 descriptionTitle: "บริการให้เช่าบูธมาตรฐาน บูธสำเร็จรูป บูธนิทรรศการ พร้อมเช่าอุปกรณ์ออกบูธ จับเป็นเซทให้แล้ว",
+                descriptionTitle2: null ,
                 Description: ["บูธขนาด 2x2 เมตร พร้อมป้ายชื่อ"],
-                Implementation: "(ราคานี้เป็นวัสดุ R8 Booth หากต้องการใช้บูธวัสดุอื่น และขนาดอื่น รบกวนติดต่อพนักงานเพื่อสอบถามเพิ่มเติม)",
+                Implementation: "ราคานี้เป็นวัสดุ R8 Booth หากต้องการใช้บูธวัสดุอื่น และขนาดอื่น รบกวนติดต่อพนักงานเพื่อสอบถามเพิ่มเติม",
                 img: [
                      SetBoothImg1,
                      SetBoothImg2,
@@ -144,8 +149,9 @@ export const BoothData = [
                 title2 : null,
 
                 descriptionTitle: "บริการให้เช่าบูธมาตรฐาน บูธสำเร็จรูป บูธนิทรรศการ พร้อมเช่าอุปกรณ์ออกบูธ จับเป็นเซทให้แล้ว",
+                descriptionTitle2: null ,
                 Description: ["บูธขนาด 2x2 เมตร","ป้ายองค์กร/ป้ายชื่อบูธ","โต๊ะหน้าขาว 1 ตัว","เก้าอี้ 2 ตัว","และถังขยะ 1 ใบ"],
-                Implementation: "(ราคานี้เป็นวัสดุ R8 Booth หากต้องการใช้บูธวัสดุอื่น และขนาดอื่น รบกวนติดต่อพนักงานเพื่อสอบถามเพิ่มเติม)",
+                Implementation: "ราคานี้เป็นวัสดุ R8 Booth หากต้องการใช้บูธวัสดุอื่น และขนาดอื่น รบกวนติดต่อพนักงานเพื่อสอบถามเพิ่มเติม",
                 img: [
                     BoothSet2Img1,
                     BoothSet2Img2,
@@ -157,8 +163,9 @@ export const BoothData = [
                 title2 : null,
 
                 descriptionTitle: "บริการให้เช่าบูธมาตรฐาน บูธสำเร็จรูป บูธนิทรรศการ พร้อมเช่าอุปกรณ์ออกบูธ จับเป็นเซทให้แล้ว",
+                descriptionTitle2: null ,
                 Description: ["บูธขนาด 2x2 เมตร","ป้ายองค์กร/ป้ายชื่อบูธ","โต๊ะหน้าขาว 1 ตัว","เก้าอี้ 2 ตัว","และถังขยะ 1 ใบ","ปลั๊กไฟพ่วงภายในบูธ 1 ชิ้น","และอุปกรณ์ส่องสว่าง(ไฟ) 1 ชิ้น"],
-                Implementation: "(ราคานี้เป็นวัสดุ R8 Booth หากต้องการใช้บูธวัสดุอื่น และขนาดอื่น รบกวนติดต่อพนักงานเพื่อสอบถามเพิ่มเติม)" ,
+                Implementation: "ราคานี้เป็นวัสดุ R8 Booth หากต้องการใช้บูธวัสดุอื่น และขนาดอื่น รบกวนติดต่อพนักงานเพื่อสอบถามเพิ่มเติม" ,
                 img: [
                     BoothSet3Img1,
                     BoothSet3Img2,
@@ -173,10 +180,11 @@ export const BoothData = [
         data:[
             {
             title: "Art Display Panel",
-            price: "฿ 4,500",
+            price: "฿ 1,200",
             title2 : null,
 
             descriptionTitle: "บริการออกแบบ และผลิต สื่อสิ่งพิมพ์สำหรับออกบูธหรือจัดงานโดยติดตั้งผ่านบอร์ดนิทรรศการ ",
+            descriptionTitle2: null ,
             Description: ["เช่าบอร์ดนิทรรศการเปล่า ขนาด 1x2.5 เมตร ราคา 1200 บาท/แผ่น 3 วัน","ออกแบบและผลิตสื่อ พร้อมบอร์ดนิทรรศการ ราคาเริ่มต้น 4500 บาท"],
             Implementation: "",
             img: [
@@ -186,10 +194,11 @@ export const BoothData = [
             },
             {
                 title: "Name Plate and Printing",
-                price: "฿ 1,500",
+                price: "฿ 300",
                 title2 : null,
 
                 descriptionTitle: "บริการออกแบบ และผลิต สื่อสิ่งพิมพ์สำหรับออกบูธหรือจัดงาน ไม่ว่าจะเป็นป้ายบูธ หรือสื่อสิ่งพิมพ์อิ้งค์เจ็ท",
+                descriptionTitle2: null ,
                 Description: ["ป้ายองค์กร ป้ายชื่อบูธ ขนาด 2.00x0.30 เมตร ราคา 300 บาท/ชิ้น","ออกแบบสื่อสิ่งพิมพ์พร้อมผลิต สำหรับออกบูธหรือจัดงาน ราคาเริ่มต้น 1500 บาท (ขนาดเปลี่ยนไปตามขนาดและวัสดุที่พิมพ์)"],
                 Implementation: "",
                 img: [
@@ -203,6 +212,7 @@ export const BoothData = [
                 title2 : null,
 
                 descriptionTitle: "บริการให้เช่า / ซื้อ-ขาย พรมสำหรับออกบูธหรือจัดงาน และบริการปูพรมเพื่อยกระดับงานของคุณ ราคาเริ่มต้น 100 บาท/ตร.ม.",
+                descriptionTitle2: null ,
                 Description: null,
                 Implementation: "",
                 img: [
@@ -223,14 +233,15 @@ export const BoothData = [
             price: "฿ 50",
             title2 : null,
             descriptionTitle: null,
+            descriptionTitle2: null ,
             Description: ["โต๊ะหน้าขาว ขนาด 120x60 เซนติเมตร ราคา 400 บาท/ตัว","เก้าอี้พลาสติก ราคาเริ่มต้น 50 บาท/ตัว","ชั้นวางของ ชั้นวางแสดงสินค้า ราคาเริ่มต้น 1000 บาท/ชิ้น","อุปกรณ์ไฟ สำหรับให้แสงสว่าง ราคาเริ่มต้น 350 บาท/ชิ้น","อุปกรณ์ให้ความเย็น พัดลมแอร์เคลื่อนที่","ขนาดเล็ก ราคา 1350 บาท/ตัว","ขนาดใหญ่ ราคา 1650 บาท/ตัว","ปลั๊กไฟพ่วงภายในบูธ ราคา 300 บาท/ชิ้น"],
-            Implementation: null,
+            Implementation: "สนใจเช่าอุปกรณ์อื่นๆ สามารถติดต่อเพื่อสอบถามเพิ่มเติมกับเราได้เลย",
             img: [
+                RentalEventImg5,
+                RentalEventImg4,
                 RentalEventImg1,
                 RentalEventImg2,
                 RentalEventImg3,
-                RentalEventImg4,
-                RentalEventImg5
                 ]
             },
         ]
@@ -244,7 +255,8 @@ export const BoothData = [
             title: "Photobooth",
             price: null,
             title2 : "THE BOXXET x DUMPSHOT Photobooth",
-            descriptionTitle: "บริการกิจกรรมโฟโต้บูธ (Photobooth) เพื่อช่วยเพิ่มสีสันและประสบการณ์ที่ดีให้กับแขกที่มาร่วมบูธหรืองานจัดแสดงของคุณ โดยเราได้จับมือร่วมกับแบรนด์โฟโต้บูธเพื่อเสนอราคาพิเศษ และให้บริการคุณแบบครบวงจรมากขึ้นกว่าเดิม" ,
+            descriptionTitle: "บริการกิจกรรมโฟโต้บูธ (Photobooth) เพื่อช่วยเพิ่มสีสันและประสบการณ์ที่ดีให้กับแขกที่มาร่วมบูธหรืองานจัดแสดงของคุณ" ,
+            descriptionTitle2: " โดยเราได้จับมือร่วมกับแบรนด์โฟโต้บูธเพื่อเสนอราคาพิเศษ และให้บริการคุณแบบครบวงจรมากขึ้นกว่าเดิม" ,
             Description: null,
             Implementation: null,
             img: [
@@ -260,8 +272,9 @@ export const BoothData = [
                 price: null,
                 title2 : "THE BOXXET Workshop",
                 descriptionTitle: "THE BOXXET x DUMPSHOT Photobooth บริการจัดกิจกรรมเวิร์คช็อปเสริมภาพลักษณ์ สร้างบรรยากาศ และประสบการณ์ที่ดีให้กับแขกของคุณ",
+                descriptionTitle2: null ,
                 Description: null,
-                Implementation: null,
+                Implementation: "สนใจจัดกิจกรรม สามารถติดต่อแจ้งรายละเอียดและ สอบถามเพิ่มเติมกับเราได้เลย",
                 img: [
                     WorkShopImg1,
                     WorkShopImg2,
