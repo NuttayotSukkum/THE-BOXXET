@@ -153,7 +153,7 @@ export const BoothData = [
             },
             {
                 title: "Booth Set 3",
-                price: "2,100",
+                price: "฿ 2,100",
                 title2 : null,
 
                 descriptionTitle: "บริการให้เช่าบูธมาตรฐาน บูธสำเร็จรูป บูธนิทรรศการ พร้อมเช่าอุปกรณ์ออกบูธ จับเป็นเซทให้แล้ว",
@@ -186,7 +186,7 @@ export const BoothData = [
             },
             {
                 title: "Name Plate and Printing",
-                price: "1,500",
+                price: "฿ 1,500",
                 title2 : null,
 
                 descriptionTitle: "บริการออกแบบ และผลิต สื่อสิ่งพิมพ์สำหรับออกบูธหรือจัดงาน ไม่ว่าจะเป็นป้ายบูธ หรือสื่อสิ่งพิมพ์อิ้งค์เจ็ท",
