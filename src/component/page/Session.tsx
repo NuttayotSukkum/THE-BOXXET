@@ -679,50 +679,50 @@ export const AboutSectionDescription: React.FC<AboutUsDescProps> = ({
   const translations: { [key: string]: Translations } = Constants.translations;
 
   return (
-    <section id={id} className="w-full flex  justify-center items-center p-4 ">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-screen-2xl">
-        {/* Left Section */}
-        <div className="text-black flex flex-col items-center lg:items-start">
-          <h1 className="text-2xl md:text-xl sm:text-xs">'ITSMA (อิษมา)'</h1>
-          <p className="mt-6 indent-6 text-pretty sm:text-xs md:text-lg lg:text-[14px]">
-            {translations[language].aboutPage2Description1}
-          </p>
-          <div className="w-full mt-6">
-            <img src={aboutUsbuttom} alt="#" className="w-full h-auto" />
-          </div>
-        </div>
-
-        {/* Middle Section */}
-        <div className="text-center md:text-left lg:justify-center">
-          <h1 className="text-5xl sm:text-xl text-customBlue font-bold">
-            THE BOXXET
-          </h1>
-          <h1 className="text-xs sm:text-[10px] text-black">
-            (บริษัท เดอะ บ๊อกซ์เซ็ต จำกัด)
-          </h1>
-          <h1 className="text-xl text-black">DESIGN FOR YOUR FUTURE</h1>
-          <div className="text-black flex flex-col text-wrap indent-6 mt-6 space-y-6">
-            <p
-              dangerouslySetInnerHTML={{
-                __html: translations[language].aboutPage2Description2,
-              }}
-            />
-            <p>{translations[language].aboutPage2Description3}</p>
-            <p>{translations[langKey].aboutPage2Description4}</p>
-          </div>
-        </div>
-
-        {/* Right Section */}
-        <div className="flex justify-center lg:justify-start">
-          <img
-            src={aboutUsbuttomright}
-            alt="styled"
-            className="w-full h-auto max-w-[167px]"
-          />
+     <section id={id} className="w-full flex  justify-center items-center p-4 ">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-screen-2xl">
+      {/* Left Section */}
+      <div className="text-black flex flex-col items-center lg:items-start">
+        <h1 className="text-2xl md:text-xl sm:text-xs">'ITSMA (อิษมา)'</h1>
+        <p className="mt-6 indent-6 text-pretty sm:text-xs md:text-lg lg:text-[14px]">
+          {translations[language].aboutPage2Description1}
+        </p>
+        <div className="w-full mt-6">
+          <img src={aboutUsbuttom} alt="#" className="w-full h-auto" />
         </div>
       </div>
 
-    </section>
+      {/* Middle Section */}
+      <div className="text-center md:text-left lg:justify-center">
+        <h1 className="text-5xl sm:text-xl text-customBlue font-bold">
+          THE BOXXET
+        </h1>
+        <h1 className="text-xs sm:text-[10px] text-black">
+          (บริษัท เดอะ บ๊อกซ์เซ็ต จำกัด)
+        </h1>
+        <h1 className="text-xl text-black">DESIGN FOR YOUR FUTURE</h1>
+        <div className="text-black flex flex-col text-wrap indent-6 mt-6 space-y-6">
+          <p
+            dangerouslySetInnerHTML={{
+              __html: translations[language].aboutPage2Description2,
+            }}
+          />
+          <p>{translations[language].aboutPage2Description3}</p>
+          <p>{translations[langKey].aboutPage2Description4}</p>
+        </div>
+      </div>
+
+      {/* Right Section */}
+      <div className="flex justify-center lg:justify-start">
+        <img
+          src={aboutUsbuttomright}
+          alt="styled"
+          className="w-full h-auto max-w-[167px]"
+        />
+      </div>
+    </div>
+
+  </section>
   );
 };
 
