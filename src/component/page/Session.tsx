@@ -108,10 +108,10 @@ export const Session: React.FC<SessionProps> = ({
                 />
               </div>
               <div className="w-full flex flex-col h-auto mt-4 xl:mt-0  ">
-                <h1 className="sm:text-xs md:text-xl lg:text-3xl 2xl:text-4xl font-bold text-center">
+                <h1 className="sm:text-xs md:text-xl lg:text-3xl 2xl:text-4xl font-bold sm:text-left text-center">
                   {translations[language].contractUsMainTitle}
                 </h1>
-                <h2 className="sm:text-xs md:text-xl lg:text-2xl 2xl:text-3xl mt-2 text-center">
+                <h2 className="sm:text-xs md:text-xl lg:text-2xl 2xl:text-3xl mt-2 sm:text-left text-center">
                   {translations[language].contractUsSubTitle}
                 </h2>
                 <p className="text-gray-600 mt-6 text-pretty whitespace-normal indent-8 leading-relaxed">
@@ -679,8 +679,8 @@ export const AboutSectionDescription: React.FC<AboutUsDescProps> = ({
   const translations: { [key: string]: Translations } = Constants.translations;
 
   return (
-    <section id={id} className="w-full flex justify-center items-center p-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-screen-xl">
+    <section id={id} className="w-full flex  justify-center items-center p-4 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-screen-2xl">
         {/* Left Section */}
         <div className="text-black flex flex-col items-center lg:items-start">
           <h1 className="text-2xl md:text-xl sm:text-xs">'ITSMA (อิษมา)'</h1>
@@ -713,7 +713,7 @@ export const AboutSectionDescription: React.FC<AboutUsDescProps> = ({
         </div>
 
         {/* Right Section */}
-        <div className="flex justify-center lg:justify-end">
+        <div className="flex justify-center lg:justify-start">
           <img
             src={aboutUsbuttomright}
             alt="styled"
@@ -721,6 +721,7 @@ export const AboutSectionDescription: React.FC<AboutUsDescProps> = ({
           />
         </div>
       </div>
+
     </section>
   );
 };
@@ -769,7 +770,7 @@ export const BoothsSection: React.FC<BoothProps> = ({ id, pageId }) => {
               <img
                 src={booth.img[0]}
                 alt="#"
-                className="w-20 h-20  xl:w-[167px] xl:h-[167px]"
+                className="w-20 h-20  xl:w-[167px] xl:h-[167px] object-cover"
               />
               <h1 className="text-[10px] xl:text-[18px]">{booth.title}</h1>
             </div>
@@ -801,7 +802,7 @@ export const BoothsSection: React.FC<BoothProps> = ({ id, pageId }) => {
                   .filter((img) => img)
                   .map((img, index) => (
                     <SwiperSlide key={index}>
-                      <img src={img} className="w-full h-full" />
+                      <img src={img} className="w-full h-full object-cover" />
                     </SwiperSlide>
                   ))}
               </Swiper>
@@ -1140,7 +1141,7 @@ const GalleryImgSection: React.FC<GalleryImgSectionProps> = ({ images }) => {
         <img
           src={images[0]}
           alt=""
-          className="w-full h-full rounded-lg object-cover"
+          className="w-full h-full  object-cover"
         />
       </div>
 
@@ -1151,7 +1152,7 @@ const GalleryImgSection: React.FC<GalleryImgSectionProps> = ({ images }) => {
             key={index}
             src={img}
             alt=""
-            className="w-full h-full rounded-lg object-cover"
+            className="w-full h-full  object-cover"
           />
         ))}
       </div>
@@ -1161,7 +1162,7 @@ const GalleryImgSection: React.FC<GalleryImgSectionProps> = ({ images }) => {
         <img
           src={images[4]}
           alt=""
-          className="w-full h-fullrounded-lg object-cover"
+          className="w-full h-full object-cover"
         />
       </div>
 
@@ -1172,7 +1173,7 @@ const GalleryImgSection: React.FC<GalleryImgSectionProps> = ({ images }) => {
             key={index}
             src={img}
             alt=""
-            className="w-full h-full rounded-lg object-cover"
+            className="w-full h-full  object-cover"
           />
         ))}
       </div>
