@@ -55,7 +55,7 @@ export const BoothData = [
         data: [
                 {
                     title: "R8 Booth",
-                    price: "1,200 บาท",
+                    price: "฿ 1,200",
                     title2 : null,
 
                     descriptionTitle: "บริการให้เช่าบูธมาตรฐาน บูธสำเร็จรูป บูธนิทรรศการ ",
@@ -71,7 +71,7 @@ export const BoothData = [
                 },
                 {
                     title: "Wooden Frame Booth",
-                    price: "1,600 บาท",
+                    price: "฿ 1,600",
                     title2 : null,
 
                     descriptionTitle: "บริการให้เช่าบูธโครงไม้ เหมาะกับกิจกรรมแฟร์ในห้างสรรพสินค้า หรืองานที่มีคอนเซปกลาง ต้องการตกแต่งบูธให้เหมือนกัน โดยที่ยังมีพื้นที่ในการจัดแสดงหรือขายสินค้า และน้ำหนักไม่เยอะ",
@@ -88,7 +88,7 @@ export const BoothData = [
                 },
                 {
                     title: "Maxima Booth",
-                    price: "3,150 บาท",
+                    price: "฿ 3,150",
                     title2 : null,
 
                     descriptionTitle: "บริการให้เช่าบูธ Maxima เหมาะสำหรับการออกบูธที่มีพื้นที่ในการออกแบบมากกว่าบูธมาตรฐาน หรือต้องการลูกเล่น ความโดดเด่น และมีการใช้ฟีเจอร์ต่างๆ ภายในบูธ แต่มีเวลาติดตั้งจำกัด",
@@ -104,7 +104,7 @@ export const BoothData = [
                 },
                 {
                     title: "Custom Booth/Exhibition",
-                    price: "12,0000 บาท",
+                    price: "฿ 120,000",
                     title2 : null,
 
                     descriptionTitle: "บริการออกแบบโครงสร้าง หรือออกแบบการตกแต่งบูธ โดยเป็นการขึ้นโครงสร้างใหม่ หรือใช้โครงสร้างที่ต่างไปจากบูธมาตรฐาน",
@@ -127,7 +127,7 @@ export const BoothData = [
         data: [
             {
                 title: "Booth Set 1",
-                price: "1500",
+                price: "฿ 1,500",
                 title2 : null,
 
                 descriptionTitle: "บริการให้เช่าบูธมาตรฐาน บูธสำเร็จรูป บูธนิทรรศการ พร้อมเช่าอุปกรณ์ออกบูธ จับเป็นเซทให้แล้ว",
@@ -140,7 +140,7 @@ export const BoothData = [
             },
             {
                 title: "Booth Set 2",
-                price: "1900",
+                price: "฿ 1,900",
                 title2 : null,
 
                 descriptionTitle: "บริการให้เช่าบูธมาตรฐาน บูธสำเร็จรูป บูธนิทรรศการ พร้อมเช่าอุปกรณ์ออกบูธ จับเป็นเซทให้แล้ว",
@@ -153,7 +153,7 @@ export const BoothData = [
             },
             {
                 title: "Booth Set 3",
-                price: "2100",
+                price: "2,100",
                 title2 : null,
 
                 descriptionTitle: "บริการให้เช่าบูธมาตรฐาน บูธสำเร็จรูป บูธนิทรรศการ พร้อมเช่าอุปกรณ์ออกบูธ จับเป็นเซทให้แล้ว",
@@ -173,7 +173,7 @@ export const BoothData = [
         data:[
             {
             title: "Art Display Panel",
-            price: "4500",
+            price: "฿ 4,500",
             title2 : null,
 
             descriptionTitle: "บริการออกแบบ และผลิต สื่อสิ่งพิมพ์สำหรับออกบูธหรือจัดงานโดยติดตั้งผ่านบอร์ดนิทรรศการ ",
@@ -186,7 +186,7 @@ export const BoothData = [
             },
             {
                 title: "Name Plate and Printing",
-                price: "1500",
+                price: "1,500",
                 title2 : null,
 
                 descriptionTitle: "บริการออกแบบ และผลิต สื่อสิ่งพิมพ์สำหรับออกบูธหรือจัดงาน ไม่ว่าจะเป็นป้ายบูธ หรือสื่อสิ่งพิมพ์อิ้งค์เจ็ท",
@@ -199,10 +199,10 @@ export const BoothData = [
             },
             {
                 title: "Carpet",
-                price: "100",
+                price: "฿ 100",
                 title2 : null,
 
-                descriptionTitle: "บริการให้เช่า / ซื้อ-ขาย พรมสำหรับออกบูธหรือจัดงาน และบริการปูพรมเพื่อยกระดับงานของคุณ  ราคาเริ่มต้น 100 บาท/ตร.ม.",
+                descriptionTitle: "บริการให้เช่า / ซื้อ-ขาย พรมสำหรับออกบูธหรือจัดงาน และบริการปูพรมเพื่อยกระดับงานของคุณ ราคาเริ่มต้น 100 บาท/ตร.ม.",
                 Description: null,
                 Implementation: "",
                 img: [
@@ -220,7 +220,7 @@ export const BoothData = [
         data:[
             {
             title: "Event Rental",
-            price: null,
+            price: "฿ 50",
             title2 : null,
             descriptionTitle: null,
             Description: ["โต๊ะหน้าขาว ขนาด 120x60 เซนติเมตร ราคา 400 บาท/ตัว","เก้าอี้พลาสติก ราคาเริ่มต้น 50 บาท/ตัว","ชั้นวางของ ชั้นวางแสดงสินค้า ราคาเริ่มต้น 1000 บาท/ชิ้น","อุปกรณ์ไฟ สำหรับให้แสงสว่าง ราคาเริ่มต้น 350 บาท/ชิ้น","อุปกรณ์ให้ความเย็น พัดลมแอร์เคลื่อนที่","ขนาดเล็ก ราคา 1350 บาท/ตัว","ขนาดใหญ่ ราคา 1650 บาท/ตัว","ปลั๊กไฟพ่วงภายในบูธ ราคา 300 บาท/ชิ้น"],

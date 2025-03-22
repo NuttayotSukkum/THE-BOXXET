@@ -858,11 +858,11 @@ export const BoothsSection: React.FC<BoothProps> = ({ id, pageId }) => {
                   </div>
 
                   {/* Description (Desktop View) */}
-                  <div className="w-full flex flex-col xl:flex-row items-end justify-end pr-5">
+                  <div className="w-full flex flex-col xl:flex-row items-start justify-start ml-4 ">
                     <div className="w-[80%] md:block hidden">
                       {selectedBooth?.Description &&
                         selectedBooth.Description.length > 0 && (
-                          <ul className="list-disc list-inside mt-3 xl:border xl:border-gray-300 rounded-md xl:p-2">
+                          <ul className="list-disc list-inside self-start mt-3 xl:border xl:border-gray-300 rounded-md xl:p-2">
                             {selectedBooth?.Description?.map((item, index) => (
                               <li key={index}>{item}</li>
                             ))}
