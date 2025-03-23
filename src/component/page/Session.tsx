@@ -608,7 +608,7 @@ export const GallerySection: React.FC<AboutUsProps> = ({ language, img }) => {
           className="relative font-bold text-white border-b-4 border-yellow-500 inline-block mt-8"
           style={{ fontSize: "clamp(3rem, 5vw, 3rem)" }}
         >
-          {translations[language].gallery}
+          {translations[language].GalleryLetter}
         </h1>
       </div>
     </div>
@@ -659,7 +659,7 @@ export const ContactSection: React.FC<AboutUsProps> = ({ language, img }) => {
           className="relative font-bold text-white border-b-4 border-yellow-500 inline-block mt-8"
           style={{ fontSize: "clamp(3rem, 5vw, 3rem)" }}
         >
-          {translations[language].contactUs}
+          {translations[language].ContactLetter}
         </h1>
       </div>
     </div>
@@ -1008,7 +1008,7 @@ export const ContractComponent: React.FC<AboutUsDescProps> = ({language}) => {
 
       <div className="w-full md:w-1/2">
         <h1 className="text-2xl font-bold">{translations[language].contactUs}</h1>
-        <p className="mt-4">{translations[language].descriptionForContractUs}</p>
+        <p className="mt-4 text-pretty">{translations[language].descriptionForContractUs}</p>
         <form className="mt-6 space-y-4" onSubmit={sendEmail}>
           <input
             type="text"

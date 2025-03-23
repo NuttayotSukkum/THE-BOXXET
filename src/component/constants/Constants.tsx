@@ -29,6 +29,8 @@ export interface Translations {
     descriptionEmail:string;
     send:string;
     descriptionForContractUs:string;
+    GalleryLetter:string;
+    ContactLetter:string;
   }
   
 
@@ -64,7 +66,9 @@ export class Constants {
           titleEmail:"Title",
           descriptionEmail:"Description",
           send:"Send",
-          descriptionForContractUs:"Please fill in the information below to contact us.",
+          descriptionForContractUs:"Have questions for The Boxxet or want to leave a message? You can find all the contact information here. We look forward to hearing from you!",
+          GalleryLetter:"GALLERY",
+          ContactLetter:"CONTACT"
         },
         TH: {
           home: "หน้าหลัก",
@@ -96,7 +100,9 @@ export class Constants {
           titleEmail:"หัวข้อ",
           descriptionEmail:"รายละเอียด",
           send:"ส่ง",
-          descriptionForContractUs:" กรุณากรอกข้อมูลด้านล่างเพื่อติดต่อเรา"
+          descriptionForContractUs:"มีข้อสงสัยในบริการของ The Boxxet หรือต้องการจะติดต่อเรา? กรุณากรอกข้อมูลด้านล่างเพื่อติดต่อเรา หวังว่าจะได้ร่วมงานกัน!",
+          GalleryLetter:"แกลเลอรี่",
+          ContactLetter:"ติดต่อเรา",
         },
     };
 }
