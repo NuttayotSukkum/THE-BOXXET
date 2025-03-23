@@ -608,7 +608,7 @@ export const GallerySection: React.FC<AboutUsProps> = ({ language, img }) => {
           className="relative font-bold text-white border-b-4 border-yellow-500 inline-block mt-8"
           style={{ fontSize: "clamp(3rem, 5vw, 3rem)" }}
         >
-          {translations[language].GalleryLetter}
+          {translations[language].gallery}
         </h1>
       </div>
     </div>
@@ -659,7 +659,7 @@ export const ContactSection: React.FC<AboutUsProps> = ({ language, img }) => {
           className="relative font-bold text-white border-b-4 border-yellow-500 inline-block mt-8"
           style={{ fontSize: "clamp(3rem, 5vw, 3rem)" }}
         >
-          {translations[language].ContactLetter}
+          {translations[language].contactUs}
         </h1>
       </div>
     </div>
@@ -679,50 +679,57 @@ export const AboutSectionDescription: React.FC<AboutUsDescProps> = ({
   const translations: { [key: string]: Translations } = Constants.translations;
 
   return (
-     <section id={id} className="w-full flex  justify-center items-center p-4 ">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-screen-2xl">
-      {/* Left Section */}
-      <div className="text-black flex flex-col items-center lg:items-start">
-        <h1 className="text-2xl md:text-xl sm:text-xs">'ITSMA (อิษมา)'</h1>
-        <p className="mt-6 indent-6 text-pretty sm:text-xs md:text-lg lg:text-[14px]">
-          {translations[language].aboutPage2Description1}
-        </p>
-        <div className="w-full mt-6">
-          <img src={aboutUsbuttom} alt="#" className="w-full h-auto" />
+    <>
+      <section id={id} className="w-full flex justify-center items-center mt-5">
+        <div className="grid grid-cols-1 lg:grid-cols-3 w-full items-stretch px-5 xl:px-0  xl:pl-40 gap-8">
+          {/* ITSMA Section */}
+          <div className="flex flex-col h-full self-stretch items-center lg:items-start text-black min-h-[600px]">
+            <h1 className="text-2xl md:text-xl sm:text-xs font-semibold">
+              'ITSMA (อิษมา)'
+            </h1>
+            <p className="mt-6 text-justify xl:leading-relaxed xl:tracking-wide xl:indent-8 text-base sm:text-sm md:text-lg lg:text-[20px] xl:max-w-[600px]">
+              {translations[language].aboutPage2Description1}
+            </p>
+            <div className="w-full mt-6">
+              <img
+                src={aboutUsbuttom}
+                alt="ITSMA bottom"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+
+          {/* THE BOXXET Section */}
+          <div className="flex flex-col h-full self-stretch p-4 text-black text-left min-h-[600px]">
+            <h1 className="text-5xl sm:text-xl text-customBlue font-bold">
+              THE BOXXET
+            </h1>
+            <h1 className="text-xs sm:text-[10px]">
+              (บริษัท เดอะ บ๊อกซ์เซ็ต จำกัด)
+            </h1>
+            <h1 className="text-xl mt-2">DESIGN FOR YOUR FUTURE</h1>
+            <div className="mt-6 space-y-6 text-[15px] xl:text-[17px] text-justify leading-relaxed tracking-wide indent-6 flex-grow">
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: translations[language].aboutPage2Description2,
+                }}
+              />
+              <p>{translations[language].aboutPage2Description3}</p>
+              <p>{translations[langKey].aboutPage2Description4}</p>
+            </div>
+          </div>
+
+          {/* Image Right Section */}
+          <div className="flex justify-center items-start lg:justify-start h-full self-stretch min-h-[600px]">
+            <img
+              src={aboutUsbuttomright}
+              alt="styled"
+              className="xl:max-w-[350px] max-w-full h-auto object-contain"
+            />
+          </div>
         </div>
-      </div>
-
-      {/* Middle Section */}
-      <div className="text-center md:text-left lg:justify-center">
-        <h1 className="text-5xl sm:text-xl text-customBlue font-bold">
-          THE BOXXET
-        </h1>
-        <h1 className="text-xs sm:text-[10px] text-black">
-          (บริษัท เดอะ บ๊อกซ์เซ็ต จำกัด)
-        </h1>
-        <h1 className="text-xl text-black">DESIGN FOR YOUR FUTURE</h1>
-        <div className="text-black flex flex-col text-wrap indent-6 mt-6 space-y-6">
-          <p
-            dangerouslySetInnerHTML={{
-              __html: translations[language].aboutPage2Description2,
-            }}
-          />
-          <p>{translations[language].aboutPage2Description3}</p>
-          <p>{translations[langKey].aboutPage2Description4}</p>
-        </div>
-      </div>
-
-      {/* Right Section */}
-      <div className="flex justify-center lg:justify-start">
-        <img
-          src={aboutUsbuttomright}
-          alt="styled"
-          className="w-full h-auto max-w-[167px]"
-        />
-      </div>
-    </div>
-
-  </section>
+      </section>
+    </>
   );
 };
 
@@ -937,8 +944,7 @@ const ContractButtom: React.FC = () => {
   );
 };
 
-export const ContractComponent: React.FC<AboutUsDescProps> = ({language}) => {
-  const translations: { [key: string]: Translations } = Constants.translations;
+export const ContractComponent: React.FC<AboutUsDescProps> = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -1007,41 +1013,40 @@ export const ContractComponent: React.FC<AboutUsDescProps> = ({language}) => {
       </div>
 
       <div className="w-full md:w-1/2">
-        <h1 className="text-2xl font-bold">{translations[language].contactUs}</h1>
-        <h1 className="font-bold mt-2 text-pretty">{translations[language].IntrodescriptionForContractUs}</h1>
-        <p className="text-pretty">{translations[language].descriptionForContractUs}</p>
+        <h1 className="text-2xl font-bold">ติดต่อเรา</h1>
+        <p className="mt-4">กรุณากรอกข้อมูลด้านล่างเพื่อติดต่อเรา</p>
         <form className="mt-6 space-y-4" onSubmit={sendEmail}>
           <input
             type="text"
             name="name"
-            placeholder={translations[language].name}
+            placeholder="ชื่อ"
             className="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-400"
             onChange={handleChange}
           />
           <input
             type="text"
             name="phone"
-            placeholder={translations[language].telephoneNumber}
+            placeholder="เบอร์ติดต่อ"
             className="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-400"
             onChange={handleChange}
           />
           <input
             type="email"
             name="mail"
-            placeholder={translations[language].email}
+            placeholder="อีเมล"
             className="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-400"
             onChange={handleChange}
           />
           <input
             type="text"
             name="subject"
-            placeholder={translations[language].titleEmail}
+            placeholder="หัวข้อ"
             className="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-400"
             onChange={handleChange}
           />
           <textarea
             name="description"
-            placeholder={translations[language].descriptionEmail}
+            placeholder="รายละเอียด"
             className="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-400 h-32"
             onChange={handleChange}
           ></textarea>
@@ -1049,7 +1054,7 @@ export const ContractComponent: React.FC<AboutUsDescProps> = ({language}) => {
             type="submit"
             className="w-full bg-yellow-400 text-black font-bold p-3 rounded-md hover:bg-yellow-500 transition"
           >
-            {translations[language].send}
+            ส่ง
           </button>
         </form>
       </div>
@@ -1140,11 +1145,7 @@ const GalleryImgSection: React.FC<GalleryImgSectionProps> = ({ images }) => {
     <div className="mt-6 container mx-auto px-4">
       {/* รูปหลักบนสุด */}
       <div className="w-full max-w-6xl mx-auto">
-        <img
-          src={images[0]}
-          alt=""
-          className="w-full h-full  object-cover"
-        />
+        <img src={images[0]} alt="" className="w-full h-full  object-cover" />
       </div>
 
       {/* แถวที่ 1 (3 รูป) */}
@@ -1161,11 +1162,7 @@ const GalleryImgSection: React.FC<GalleryImgSectionProps> = ({ images }) => {
 
       {/* รูปหลักกลาง */}
       <div className="w-full max-w-6xl mx-auto mt-6">
-        <img
-          src={images[4]}
-          alt=""
-          className="w-full h-full object-cover"
-        />
+        <img src={images[4]} alt="" className="w-full h-full object-cover" />
       </div>
 
       {/* แถวที่ 2 (3 รูป) */}
