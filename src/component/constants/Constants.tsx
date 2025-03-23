@@ -19,7 +19,16 @@ export interface Translations {
     address: string;
     contractUsDescription: string;
     galleryDescription: string;
-    aboutImpl:string
+    aboutImpl:string;
+    BoothIntro:string;
+    BoothContract:string;
+    name:string;
+    telephoneNumber:string;
+    email:string;
+    titleEmail:string;
+    descriptionEmail:string;
+    send:string;
+    descriptionForContractUs:string;
   }
   
 
@@ -47,6 +56,15 @@ export class Constants {
           address: "14/134 The Villa Ramindra Bang Khen Tha Raeng, Bang Khen, Bangkok 10220",
           contractUsDescription:"Have questions for The Boxxet or want to leave a message? You can find all the contact information here. We look forward to hearing from you!",
           galleryDescription: "Explore our past events and booth setups. Get inspired for your next event.",
+          BoothIntro: "Booth and Event rental services, Designed to suit all your types of events and activities",
+          BoothContract:"Contract Us @theboxxet",
+          name:"name",
+          telephoneNumber:"PhoneNumber",
+          email:"Email",
+          titleEmail:"Title",
+          descriptionEmail:"Description",
+          send:"Send",
+          descriptionForContractUs:"Please fill in the information below to contact us.",
         },
         TH: {
           home: "หน้าหลัก",
@@ -59,7 +77,7 @@ export class Constants {
           contractUsSubTitle: "DESIGN FOR YOUR FUTURE",
           contractUsdescription: "ด้วยประสบการณ์ยาวนานกว่า '32 ปี' จากการเริ่มต้นในปี พ.ศ. 2536 ภายใต้ชื่อเดิม “อิษมา” บริษัทของเราได้สั่งสมความเชี่ยวชาญด้านการให้บริการเช่าบอร์ดนิทรรศการและงานจัดแสดงสินค้า งานวิจัยการตลาดแบบครบวงจร ความมุ่งมั่นของเราคือการใส่ใจในความต้องการของลูกค้า และสร้างสรรค์บริการที่ตอบโจทย์ทุกความพึงพอใจ เพื่อให้งานของคุณดำเนินไปอย่างราบรื่นและเปี่ยมด้วยประสิทธิภาพ เราภูมิใจที่ได้เป็นส่วนหนึ่งในความสำเร็จของหลากหลายองค์กร และเรายังคงพัฒนาความสามารถของเราอย่างต่อเนื่อง เพื่อส่งมอบคุณค่าและสร้างความเชื่อมั่นให้กับลูกค้าของเราในทุกโอกาส",
           ourProject: "ผลงานของเรา",
-          ourProjectDesp: "Booth and Event rental services, Designed to suit all your types of events and activities.",
+          ourProjectDesp: "บริการเช่าสถานที่จัดบูธและอีเวนต์ สร้างสรรค์เพื่อตอบโจทย์ทุกความต้องการในงานและกิจกรรมของคุณ",
           customers: "ลูกค้าเรา",
           serviceSection: "บริการ",
           serviceSectionDesc: "คุณจะได้รับทุกสิ่งที่คุณต้องการเพื่อทำให้งานของคุณน่าจดจำ ตั้งแต่บูธที่น่าดึงดูดไปจนถึงกิจกรรมที่สนุกสนาน!",
@@ -70,6 +88,15 @@ export class Constants {
           address: "14/134 เดอร์ วิลล่า รามอิทรา บางเขน แขวง ท่าแร้ง เขต บางเขน กรุงเทพมหานคร 10220",
           contractUsDescription: "มีคำถามเกี่ยวกับ The Boxxet หรือต้องการฝากข้อความหรือไม่ คุณสามารถค้นหาข้อมูลติดต่อทั้งหมดได้ที่นี่ เราหวังว่าจะได้รับการติดต่อจากคุณ!",
           galleryDescription:"สำรวจกิจกรรมที่ผ่านมาและการจัดบูธของเรา รับแรงบันดาลใจสำหรับงานครั้งต่อไปของคุณ",
+          BoothIntro:"บริการเช่าสถานที่จัดบูธและอีเวนต์ ออกแบบมาเพื่อตอบโจทย์ทุกประเภทของกิจกรรมและงานต่างๆ",
+          BoothContract:"ติดต่อเรา @theboxxet",
+          name:"ชื่อ",
+          telephoneNumber:"เบอร์ติดต่อ",
+          email:"อีเมล",
+          titleEmail:"หัวข้อ",
+          descriptionEmail:"รายละเอียด",
+          send:"ส่ง",
+          descriptionForContractUs:" กรุณากรอกข้อมูลด้านล่างเพื่อติดต่อเรา"
         },
     };
 }

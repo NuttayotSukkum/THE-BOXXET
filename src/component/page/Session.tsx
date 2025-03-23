@@ -937,7 +937,8 @@ const ContractButtom: React.FC = () => {
   );
 };
 
-export const ContractComponent: React.FC<AboutUsDescProps> = () => {
+export const ContractComponent: React.FC<AboutUsDescProps> = ({language}) => {
+  const translations: { [key: string]: Translations } = Constants.translations;
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -1006,40 +1007,40 @@ export const ContractComponent: React.FC<AboutUsDescProps> = () => {
       </div>
 
       <div className="w-full md:w-1/2">
-        <h1 className="text-2xl font-bold">ติดต่อเรา</h1>
-        <p className="mt-4">กรุณากรอกข้อมูลด้านล่างเพื่อติดต่อเรา</p>
+        <h1 className="text-2xl font-bold">{translations[language].contactUs}</h1>
+        <p className="mt-4">{translations[language].descriptionForContractUs}</p>
         <form className="mt-6 space-y-4" onSubmit={sendEmail}>
           <input
             type="text"
             name="name"
-            placeholder="ชื่อ"
+            placeholder={translations[language].name}
             className="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-400"
             onChange={handleChange}
           />
           <input
             type="text"
             name="phone"
-            placeholder="เบอร์ติดต่อ"
+            placeholder={translations[language].telephoneNumber}
             className="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-400"
             onChange={handleChange}
           />
           <input
             type="email"
             name="mail"
-            placeholder="อีเมล"
+            placeholder={translations[language].email}
             className="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-400"
             onChange={handleChange}
           />
           <input
             type="text"
             name="subject"
-            placeholder="หัวข้อ"
+            placeholder={translations[language].titleEmail}
             className="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-400"
             onChange={handleChange}
           />
           <textarea
             name="description"
-            placeholder="รายละเอียด"
+            placeholder={translations[language].descriptionEmail}
             className="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-400 h-32"
             onChange={handleChange}
           ></textarea>
@@ -1047,7 +1048,7 @@ export const ContractComponent: React.FC<AboutUsDescProps> = () => {
             type="submit"
             className="w-full bg-yellow-400 text-black font-bold p-3 rounded-md hover:bg-yellow-500 transition"
           >
-            ส่ง
+            {translations[language].send}
           </button>
         </form>
       </div>

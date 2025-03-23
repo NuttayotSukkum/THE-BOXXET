@@ -21,6 +21,7 @@ import {
 } from "../utils/ComponentsUtil";
 import HambergerNavBar from "../navigationBar/hamberger-nav-bar";
 import useStore from "../../store";
+import { Constants, Translations } from "../constants/Constants";
 
 const MainPage: React.FC = () => {
   const { withLanguage, setWithLanguage } = useStore();
@@ -40,15 +41,17 @@ const MainPage: React.FC = () => {
 
   const DESIGN_MESSAGE: string = "DESIGN FOR YOUR FUTURE";
   const THE_BOXXET: string = "THE BOXXET";
-  const DESCRIPTION_MESSAGE_TOP: string =
-    "Booth and Event rental services, Designed to suit all your types of events and activities";
-  const DESCRIPTION_MESSAGE_footer: string = "Contract Us @theboxxet";
   const { language } = useLanguage();
   const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState("home");
 
-  const IntroSectionOfMainPage = () => {
+  interface IntroSectionProps {
+    language: string;
+  }
+
+  const IntroSectionOfMainPage:React.FC<IntroSectionProps> = ({language}) => {
+    const translations: { [key: string]: Translations } = Constants.translations;
     return (
       <div className="relative flex flex-col items-center justify-center w-full px-4 text-center pb-20">
         {/* ข้อความด้านบน */}
@@ -63,16 +66,15 @@ const MainPage: React.FC = () => {
 
         {/* คำอธิบาย */}
         <p className="text-customeWhite text-lg sm:text-xl md:text-2xl italic max-w-screen-md mt-40">
-          {DESCRIPTION_MESSAGE_TOP}
+          {translations[language].BoothIntro}
         </p>
 
         {/* ติดต่อเรา */}
-        <a
-          href="#"
+        <Link to={"/contact"}
           className="text-customYellow text-lg sm:text-xl md:text-2xl italic mt-4"
         >
-          {DESCRIPTION_MESSAGE_footer}
-        </a>
+          {translations[language].BoothContract}
+        </Link>
       </div>
     );
   };
@@ -182,7 +184,7 @@ const MainPage: React.FC = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-[#09283C] opacity-50"></div>
         <div>
           <NavSectionOfMainPage />
-          {currentPage === "home" && <IntroSectionOfMainPage />}
+          {currentPage === "home" && <IntroSectionOfMainPage language={language}/>}
         </div>
       </div>
       <Session

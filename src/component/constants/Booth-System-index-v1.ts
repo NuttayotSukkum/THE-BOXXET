@@ -274,7 +274,7 @@ export const BoothData = [
                 descriptionTitle: "THE BOXXET x DUMPSHOT Photobooth บริการจัดกิจกรรมเวิร์คช็อปเสริมภาพลักษณ์ สร้างบรรยากาศ และประสบการณ์ที่ดีให้กับแขกของคุณ",
                 descriptionTitle2: null ,
                 Description: null,
-                Implementation: "สนใจจัดกิจกรรม สามารถติดต่อแจ้งรายละเอียดและ สอบถามเพิ่มเติมกับเราได้เลย",
+                Implementation: "สนใจจัดกิจกรรม สามารถติดต่อแจ้งรายละเอียดและสอบถามเพิ่มเติมกับเราได้เลย",
                 img: [
                     WorkShopImg1,
                     WorkShopImg2,
