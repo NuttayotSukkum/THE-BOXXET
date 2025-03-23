@@ -1008,7 +1008,8 @@ export const ContractComponent: React.FC<AboutUsDescProps> = ({language}) => {
 
       <div className="w-full md:w-1/2">
         <h1 className="text-2xl font-bold">{translations[language].contactUs}</h1>
-        <p className="mt-4 text-pretty">{translations[language].descriptionForContractUs}</p>
+        <h1 className="font-bold mt-2 text-pretty">{translations[language].IntrodescriptionForContractUs}</h1>
+        <p className="text-pretty">{translations[language].descriptionForContractUs}</p>
         <form className="mt-6 space-y-4" onSubmit={sendEmail}>
           <input
             type="text"
