@@ -47,6 +47,7 @@ const HambergerNavBar: React.FC<{}> = () => {
               <Link to="/booth-set" className=" hover:text-yellow-400 mt-4">Booth Set</Link>
               <Link to="/element-design" className="hover:text-yellow-400 mt-4">Element Design</Link>
               <Link to="/event-rental" className=" hover:text-yellow-400 mt-4">Event Rental</Link>
+              <Link to="/activity" className=" hover:text-yellow-400 mt-4">Activity</Link>
             </div>
           )}
 
