@@ -15,13 +15,13 @@
       title: "Booth Set",
       link: "/booth-set",
       titleMain: "Booth Set",
-      bullets: ["Booth Set 1", "Booth Set 2", "Booth Set 3", "Custom Booth/Exhibition"],
+      bullets: ["Booth Set 1", "Booth Set 2", "Booth Set 3"],
       backgroundImage: BoothSet,
     },
     {
       title: "Element Design",
       link: "/element-design",
-      bullets: ["Art Display Panel", "Name Plate and Printing", "Carpet", "Packaging"],
+      bullets: ["Art Display Panel", "Name Plate and Printing", "Carpet"],
       backgroundImage: ElementDesign,
     },
     {

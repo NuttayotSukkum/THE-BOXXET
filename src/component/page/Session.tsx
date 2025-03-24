@@ -827,7 +827,7 @@ export const BoothsSection: React.FC<BoothProps> = ({ id, pageId }) => {
                 {selectedBooth?.price && selectedBooth?.price.length > 0 && (
                   <div>
                     <h2 className=" text-sm md:text-base mt-6">ราคาเริ่มต้น</h2>
-                    <h1 className="md:text-4xl font-bold text-3xl mt-4">
+                    <h1 className="md:text-4xl font-bold text-3xl mt-4 text-customBlue">
                       {selectedBooth.price}
                     </h1>
                   </div>
@@ -867,11 +867,11 @@ export const BoothsSection: React.FC<BoothProps> = ({ id, pageId }) => {
                   </div>
 
                   {/* Description (Desktop View) */}
-                  <div className="w-full flex flex-col xl:flex-row items-start justify-start ml-4 ">
-                    <div className="w-[80%] md:block hidden">
+                  <div className="w-full flex flex-col xl:flex-row items-start justify-start ml-4">
+                    <div className="w-[90%] md:block hidden">
                       {selectedBooth?.Description &&
                         selectedBooth.Description.length > 0 && (
-                          <ul className="list-disc list-inside self-start mt-3 xl:border xl:border-gray-300 rounded-md xl:p-2">
+                          <ul className="list-disc list-inside self-start mt-3 xl:border xl:border-gray-300 rounded-md xl:p-2 ">
                             {selectedBooth?.Description?.map((item, index) => (
                               <li key={index}>{item}</li>
                             ))}
