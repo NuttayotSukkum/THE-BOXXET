@@ -681,50 +681,48 @@ export const AboutSectionDescription: React.FC<AboutUsDescProps> = ({
   return (
     <>
       <section id={id} className="w-full flex justify-center items-center mt-5">
-        <div className="grid grid-cols-1 lg:grid-cols-3 w-full items-stretch px-5 xl:px-0  xl:pl-40 gap-8">
-          {/* ITSMA Section */}
-          <div className="flex flex-col h-full self-stretch items-center lg:items-start text-black min-h-[600px]">
-            <h1 className="text-2xl md:text-xl sm:text-xs font-semibold">
-              'ITSMA (อิษมา)'
-            </h1>
-            <p className="mt-6 text-justify xl:leading-relaxed xl:tracking-wide xl:indent-8 text-base sm:text-sm md:text-lg lg:text-[20px] xl:max-w-[600px]">
+  
+        <div className="flex flex-col lg:flex-row w-full items-stretch px-5 xl:px-0 xl:pl-40 gap-8">
+          
+          <div className="flex flex-col flex-1 p-4 bg-white">
+            <h1 className="text-[20px] font-semibold">ITSMA (อิษมา)</h1>
+            <p className="mt-4 text-justify leading-relaxed tracking-wide indent-6 text-[16px]">
               {translations[language].aboutPage2Description1}
             </p>
-            <div className="w-full mt-6">
+           
+            <div className="w-full mt-auto pt-4">
               <img
                 src={aboutUsbuttom}
                 alt="ITSMA bottom"
-                className="w-full h-auto"
+                className="w-full max-h-[250px] object-cover "
               />
             </div>
           </div>
-
-          {/* THE BOXXET Section */}
-          <div className="flex flex-col h-full self-stretch p-4 text-black text-left min-h-[600px]">
-            <h1 className="text-5xl sm:text-xl text-customBlue font-bold">
-              THE BOXXET
-            </h1>
-            <h1 className="text-xs sm:text-[10px]">
-              (บริษัท เดอะ บ๊อกซ์เซ็ต จำกัด)
-            </h1>
-            <h1 className="text-xl mt-2">DESIGN FOR YOUR FUTURE</h1>
-            <div className="mt-6 space-y-6 text-[15px] xl:text-[17px] text-justify leading-relaxed tracking-wide indent-6 flex-grow">
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: translations[language].aboutPage2Description2,
-                }}
-              />
-              <p>{translations[language].aboutPage2Description3}</p>
-              <p>{translations[langKey].aboutPage2Description4}</p>
+     
+          <div className="flex flex-col flex-1 p-4 bg-white">
+            <div>
+              <h1 className="text-[20px] font-bold text-customBlue">
+                THE BOXXET
+              </h1>
+              <h2 className="text-[14px]">(บริษัท เดอะ บ๊อกซ์เซ็ต จำกัด)</h2>
+              <h3 className="text-[16px] mt-2">DESIGN FOR YOUR FUTURE</h3>
+              <div className="mt-6 space-y-4 text-[16px] text-justify leading-relaxed tracking-wide indent-6">
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: translations[language].aboutPage2Description2,
+                  }}
+                />
+                <p>{translations[language].aboutPage2Description3}</p>
+                <p>{translations[langKey].aboutPage2Description4}</p>
+              </div>
             </div>
           </div>
-
-          {/* Image Right Section */}
-          <div className="flex justify-center items-start lg:justify-start h-full self-stretch min-h-[600px]">
+    
+          <div className="flex items-start flex-1 p-4 bg-white">
             <img
               src={aboutUsbuttomright}
               alt="styled"
-              className="xl:max-w-[350px] max-w-full h-auto object-contain"
+              className="w-full xl:max-w-[250px] h-full object-cover"
             />
           </div>
         </div>
@@ -944,7 +942,7 @@ const ContractButtom: React.FC = () => {
   );
 };
 
-export const ContractComponent: React.FC<AboutUsDescProps> = ({language}) => {
+export const ContractComponent: React.FC<AboutUsDescProps> = ({ language }) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -952,7 +950,6 @@ export const ContractComponent: React.FC<AboutUsDescProps> = ({language}) => {
     subject: "",
     description: "",
   });
-  
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -1016,8 +1013,12 @@ export const ContractComponent: React.FC<AboutUsDescProps> = ({language}) => {
       </div>
 
       <div className="w-full md:w-1/2">
-        <h1 className="text-2xl font-bold">{translations[language].contactUs}</h1>
-        <h1 className="mt-4 font-bold">{translations[language].IntrodescriptionForContractUs}</h1>
+        <h1 className="text-2xl font-bold">
+          {translations[language].contactUs}
+        </h1>
+        <h1 className="mt-4 font-bold">
+          {translations[language].IntrodescriptionForContractUs}
+        </h1>
         <p>{translations[language].descriptionForContractUs}</p>
         <form className="mt-6 space-y-4" onSubmit={sendEmail}>
           <input
@@ -1058,7 +1059,7 @@ export const ContractComponent: React.FC<AboutUsDescProps> = ({language}) => {
             type="submit"
             className="w-full bg-yellow-400 text-black font-bold p-3 rounded-md hover:bg-yellow-500 transition"
           >
-           {translations[language].send}
+            {translations[language].send}
           </button>
         </form>
       </div>
