@@ -1,0 +1,22 @@
+version: '3.8'
+
+networks:
+  custom_bridge:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.0.0/16
+
+services:
+  nginx:
+    image: the-boxxet-v1:latest
+    container_name: my_nginx
+    ports:
+      - "127.0.0.1:8080:80"
+    # volumes:
+    #   - ./nginx.conf:/etc/nginx/nginx.conf:ro  # ใช้ nginx.conf ที่กำหนด
+    #   - ./html:/usr/share/nginx/html:ro  # ไฟล์ static website
+    #   - ./logs:/var/log/nginx  # แชร์ logs ออกมาที่ host
+    networks:
+      custom_bridge:
+        ipv4_address: 172.18.0.10
