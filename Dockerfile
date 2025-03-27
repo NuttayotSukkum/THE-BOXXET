@@ -16,6 +16,6 @@ RUN npm run build
 
 # COPY --from=build /app/dist /usr/share/nginx/html
 
-EXPOSE 9000
+EXPOSE 5173
 
 # CMD ["nginx", "-g", "daemon off;"]
