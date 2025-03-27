@@ -20,6 +20,7 @@ import aboutUsbuttomright from "../../assets/page/about-ous-right.png";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 // import {BoothSystem} from "../constants/Booth-System-index.js"
 import { BoothData } from "../constants/Booth-System-index-v1.ts";
+import { maximaCostomBoothIndex } from "../constants/MaximaCostomBooth.ts"
 import TheBoxxetMailImg from "../../assets/logo/the-boxxet-send-enmail-logo.jpeg";
 
 // css
@@ -1180,6 +1181,59 @@ const GalleryImgSection: React.FC<GalleryImgSectionProps> = ({ images }) => {
             className="w-full h-full  object-cover"
           />
         ))}
+      </div>
+    </div>
+  );
+};
+
+export const MaximaCostomBooth: React.FC = () => {
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const swiperRef = useRef<any>(null);
+  const prevRef = useRef<HTMLButtonElement>(null);
+  const nextRef = useRef<HTMLButtonElement>(null);
+  const selectedBooth = maximaCostomBoothIndex[0];
+
+  return (
+    <div className="flex w-full px-5 xl:px-40 mb-10">
+      <div className="w-full min-h-[490px] bg-gray-200 border-l-4 border-black xl:border-gray-400 justify-center items-center">
+        <div className="p-12 flex flex-col xl:flex-row gap-20 justify-center items-center">
+          <div className="flex">
+            {/* ใช้ ref แทน className */}
+            <button ref={prevRef}>
+              <ArrowBackIosIcon />
+            </button>
+            <Swiper
+              slidesPerView={1}
+              initialSlide={selectedImageIndex}
+              onSlideChange={(swiper) => setSelectedImageIndex(swiper.activeIndex)}
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              navigation={{
+                prevEl: prevRef.current,
+                nextEl: nextRef.current,
+              }}
+              modules={[Navigation]}
+              className="w-[452px] xl:w-[520px] h-[260px] xl:h-[320px] mt-6"
+            >
+              {selectedBooth.backgroundImage.map((img, index) => (
+                <SwiperSlide key={index} className="justify-center items-center px-20 lg:px-0" >
+                  <img src={img} className="w-full h-full" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            {/* ใช้ ref แทน className */}
+            <button ref={nextRef}>
+              <ArrowBackIosIcon className="rotate-180" />
+            </button>
+          </div>
+          <div className="h-auto text-left">
+            <h1 className="text-4xl">{selectedBooth.title}</h1>
+            <p className="text-sm md:text-base mt-6">เริ่มต้น</p>
+            <h1 className="md:text-4xl font-bold text-3xl mt-4 text-customBlue">
+              {selectedBooth.price}
+            </h1>
+            <p className="lg:text-xl mt-4 xl:mt-8 px-5">{selectedBooth.description}</p>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import NavBar from "../navigationBar/NavBar";
-import { OurProject, FooterSection, BoothsSection } from "./Session";
+import { OurProject, FooterSection, BoothsSection,MaximaCostomBooth } from "./Session";
 import ourProject from "../../assets/page/our-project.png";
 import { useLanguage } from "../utils/ComponentsUtil";
 import useStore from "../../store";
@@ -23,6 +23,7 @@ const Boots: React.FC = () => {
     <div className={`${withLanguage ? "container mx-auto" : ""}`}>
       <NavBar />
       <BoothsSection id="about-boots-section" language={language} pageId="1" />
+      <MaximaCostomBooth/>
       <OurProject
         id="ourProject-boots-section"
         language={language}
